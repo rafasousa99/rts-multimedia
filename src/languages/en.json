@@ -1,0 +1,46 @@
+{
+	"title": "Once upon a time",
+	"sub-title": "a horse",
+	"text-title": "Who lived on a beautiful carousel",
+	"text-content": "It had painted ears, and the body was made of paper! Running, trálálá, jumping, trálálá, little horse never leaves its place. Running, trálálá, jumping, trálálá.",
+	"text-legend": "// Little horse never leaves its place.",
+
+	"SETUP": "SETUP",
+
+	"experience": "for a better experience,",
+	"name": "write here your name",
+	"lets-go": "let's go",
+
+	"NAVBAR": "NAVBAR",
+
+	"about": "about",
+	"services": "services",
+	"contacts": "contacts",
+
+	"FOOTER": "FOOTER",
+
+	"copyright": "all rights reserved",
+
+	"HOME": "HOME",
+
+	"hi": "hi",
+	"help": "can i help?",
+	"photography": "photography",
+	"video": "video",
+	"design": "design",
+
+	"CONTACTS": "CONTACTS",
+
+	"contact-me": "contact me",
+	"more-info": "if you need more information or if you want to work with me, just fill in the form.",
+	"form-name": "name",
+	"form-y-name": "your name",
+	"form-email": "email",
+	"form-y-email": "your email",
+	"form-message": "message",
+	"form-optional": "optional",
+	"form-service": "service",
+	"form-submit": "submit",
+	"select": "select",
+	"other": "other"
+}

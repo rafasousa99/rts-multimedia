@@ -1,0 +1,46 @@
+{
+	"title": "C'era una volta",
+	"sub-title": "un cavallo",
+	"text-title": "Che viveva su una bella giostra",
+	"text-content": "Aveva le orecchie dipinte e il corpo era di carta! Correre, trálálá, saltare, trálálá, il cavallino non lascia mai il suo posto. Correre, trálálá, saltare, trálálá.",
+	"text-legend": "// Il cavallino non lascia mai il suo posto.",
+
+	"SETUP": "SETUP",
+
+	"experience": "per uma meglo experiencia,",
+	"name": "scrive qui il tuo primo nuome",
+	"lets-go": "andiamo",
+
+	"NAVBAR": "NAVBAR",
+
+	"about": "riguardo",
+	"services": "servizi",
+	"contacts": "contatti",
+
+	"FOOTER": "FOOTER",
+
+	"copyright": "tutti i diritti riservati.",
+
+	"HOME": "HOME",
+
+	"hi": "ciao",
+	"help": "posso aiutare?",
+	"photography": "fotografia",
+	"video": "video",
+	"design": "design",
+
+	"CONTACTS": "CONTACTS",
+
+	"contact-me": "contacta mi",
+	"more-info": "if you need more information or if you want to work with me, just fill in the form.",
+	"form-name": "name",
+	"form-y-name": "your name",
+	"form-email": "emaili",
+	"form-y-email": "your email",
+	"form-message": "messagene",
+	"form-optional": "optionalle",
+	"form-service": "service",
+	"form-submit": "submitere",
+	"select": "selettii",
+	"other": "otro"
+}

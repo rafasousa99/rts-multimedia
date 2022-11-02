@@ -1,0 +1,46 @@
+{
+	"title": "Era uma vez",
+	"sub-title": "um cavalo",
+	"text-title": "Que vivia num lindo carrossel",
+	"text-content": "Tinha as orelhas pintadas, e o corpo era feito de papel! A correr, trálálá, a saltar, trálálá, cavalinho nunca sai do seu lugar. A correr, trálálá, a saltar, trálálá.",
+	"text-legend": "// Cavalinho nunca sai do seu lugar",
+
+	"SETUP": "SETUP",
+
+	"experience": "para uma melhor experiência,",
+	"name": "escreve aqui o teu primeiro nome",
+	"lets-go": "vamos",
+
+	"NAVBAR": "NAVBAR",
+
+	"about": "sobre",
+	"services": "serviços",
+	"contacts": "contactos",
+
+	"FOOTER": "FOOTER",
+
+	"copyright": "todos os direitos reservados.",
+
+	"HOME": "HOME",
+
+	"hi": "olá",
+	"help": "posso ajudar?",
+	"photography": "fotografia",
+	"video": "vídeo",
+	"design": "design",
+
+	"CONTACTS": "CONTACTS",
+
+	"contact-me": "contacta-me",
+	"more-info": "se precisas de mais informações ou queres trabalhar comigo, basta preencheres o formulário.",
+	"form-name": "nome",
+	"form-y-name": "o teu name",
+	"form-email": "email",
+	"form-y-email": "o teu email",
+	"form-message": "mensagem",
+	"form-optional": "opcional",
+	"form-service": "serviço",
+	"form-submit": "submeter",
+	"select": "selecionar",
+	"other": "outro"
+}
