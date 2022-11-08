@@ -7,13 +7,13 @@
 
 	"SETUP": "SETUP",
 
-	"experience": "per uma meglo experiencia,",
-	"name": "scrive qui il tuo primo nuome",
+	"experience": "per uma meglo experiencia, scrive qui",
+	"name": "il tuo primo nome",
 	"lets-go": "andiamo",
 
 	"NAVBAR": "NAVBAR",
 
-	"about": "riguardo",
+	"about": "su di me",
 	"services": "servizi",
 	"contacts": "contatti",
 
@@ -31,16 +31,23 @@
 
 	"CONTACTS": "CONTACTS",
 
-	"contact-me": "contacta mi",
-	"more-info": "if you need more information or if you want to work with me, just fill in the form.",
-	"form-name": "name",
-	"form-y-name": "your name",
-	"form-email": "emaili",
-	"form-y-email": "your email",
-	"form-message": "messagene",
-	"form-optional": "optionalle",
-	"form-service": "service",
-	"form-submit": "submitere",
-	"select": "selettii",
-	"other": "otro"
+	"contact-me": "contattami",
+	"more-info": "se hai bisogno di più informazioni o se vuoi lavorare con me, basta compilare il formulario.",
+	"form-name": "nome",
+	"form-y-name": "il tuo nome",
+	"form-email": "email",
+	"form-y-email": "la tua email",
+	"form-message": "messaggio",
+	"form-optional": "optional",
+	"form-service": "servizio",
+	"form-submit": "invia",
+	"select": "selezionare",
+	"other": "altro",
+
+	"ABOUT ME": "ABOUT ME",
+
+	"this-is-me": "questo sono io",
+	"me-profile1": "sono un Tecnico di multimedia appassionato per i contenuti audiovisivi, ma con interesse anche per diverse aree come il design, modellistica 3D,  realtá virtuale , realtá aumentata, web design ed interfaccia multimediale",
+	"me-profile2": "sono una persona dedicata, onesta, determinato e che apprende rapidamente ogni volta che ho bisogno di crescere professionalmente. Non mi spaventano le sfide, perché credo che sia il non essere a proprio agio che mi puó trasformare in un professionista migliore.",
+	"questions": "per qualsiasi dubbio che possiate avere, non esitate a cntattarmi attraverso la email - rafaelteixeiradesousa@outlook.com - o compilando il formulario che segue."
 }

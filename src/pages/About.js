@@ -1,13 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { Text } from "../components/Language";
+import profileImage from "../images/profile/RafaelSousa.jpg";
+import Contacts from "./Contacts";
 const About = () => {
 	return (
 		<div className="container">
-			<h2>About Page</h2>
-			<Link to="/" className="btn">
+			<div className="about-me">
+				<div className="col photo">
+					<img src={profileImage} alt="Rafael Teixeira de Sousa" width="300px" heigth="auto" />
+				</div>
+				<div className="col text-me">
+					<h2>
+						<Text tid="this-is-me" />
+					</h2>
+					<p>
+						<Text tid="me-profile1" />
+					</p>
+					<p>
+						<Text tid="me-profile2" />
+					</p>
+					<p>
+						<Text tid="questions" />
+					</p>
+				</div>
+			</div>
+			<Contacts />
+			{/* 			<Link to="/" className="btn">
 				Back Home
-			</Link>
+			</Link> */}
 		</div>
 	);
 };

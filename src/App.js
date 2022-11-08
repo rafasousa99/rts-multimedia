@@ -17,23 +17,24 @@ import SetupForm from "./SetupForm";
 
 function App() {
 	const { waiting, error } = useGlobalContext();
-	if (waiting) {
-		return <SetupForm />;
-	}
 	return (
 		<LanguageProvider>
-			<BrowserRouter className="navbar container">
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="about" element={<About />} />
-					<Route path="services" element={<Services />} />
-					<Route path="contacts" element={<Contacts />} />
-					<Route path="test" element={<TestPage />} />
-					<Route path="*" element={<Error />} />
-				</Routes>
-				<Footer />
-			</BrowserRouter>
+			{waiting ? (
+				<SetupForm />
+			) : (
+				<BrowserRouter className="navbar container">
+					<Navbar />
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="about" element={<About />} />
+						<Route path="services" element={<Services />} />
+						<Route path="contacts" element={<Contacts />} />
+						<Route path="test" element={<TestPage />} />
+						<Route path="*" element={<Error />} />
+					</Routes>
+					<Footer />
+				</BrowserRouter>
+			)}
 		</LanguageProvider>
 	);
 }

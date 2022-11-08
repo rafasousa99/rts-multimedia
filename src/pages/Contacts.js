@@ -1,12 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import { Text } from "../components/Language";
+import { Text, StringOfText } from "../components/Language";
 
 const Contacts = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [service, setService] = useState("");
+
+	// const [changeName, setChangeName] = useState("");
+
+	// setChangeName(languageContext.dictionary);
+	// console.log(changeName);
 
 	const handleChange = (e) => {
 		const targetValue = e.target.value;
@@ -23,6 +29,10 @@ const Contacts = () => {
 
 	const clickSubmit = (e) => {
 		alert(`Name: ${name} | Email: ${email} | Service: ${service} | Message: "${message}"`);
+		setName("");
+		setEmail("");
+		setMessage("");
+		setService("");
 	};
 
 	return (
@@ -46,7 +56,7 @@ const Contacts = () => {
 							id="name"
 							name="firstname"
 							onChange={handleChange}
-							placeholder="Your name..."
+							placeholder={StringOfText("form-y-name")}
 							value={name}
 						/>
 					</div>
@@ -61,7 +71,7 @@ const Contacts = () => {
 							id="email"
 							name="email"
 							onChange={handleChange}
-							placeholder="Your email.."
+							placeholder={StringOfText("form-y-email")}
 							value={email}
 						/>
 					</div>
@@ -78,7 +88,7 @@ const Contacts = () => {
 							className="message-form"
 							id="message"
 							onChange={handleChange}
-							placeholder="/ Optional /"
+							placeholder={StringOfText("form-optional")}
 							value={message}
 						></textarea>
 					</div>
@@ -90,15 +100,20 @@ const Contacts = () => {
 						</label>
 						<select id="services" name="services" onChange={handleChange} className="btn-main">
 							<option value="" disabled selected>
-								/ Select /
+								{StringOfText("select")}
 							</option>
-							<option value="photography">photography</option>
-							<option value="video">Video</option>
-							<option value="design">Design</option>
-							<option value="other">Other</option>
+							<option value="photography">{StringOfText("photography")}</option>
+							<option value="video">{StringOfText("video")}</option>
+							<option value="design">{StringOfText("design")}</option>
+							<option value="other">{StringOfText("other")}</option>
 						</select>
 					</div>
-					<input type="submit" value="Submit" className="main-btn form-btn" onClick={clickSubmit} />
+					<input
+						type="submit"
+						value={StringOfText("form-submit")}
+						className="main-btn form-btn"
+						onClick={clickSubmit}
+					/>
 				</div>
 			</div>
 		</div>

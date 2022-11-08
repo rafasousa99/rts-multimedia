@@ -1,49 +1,55 @@
 import React, { useState } from "react";
 import ServiceItem from "./ServiceItem";
 import services from "../utils/services.json";
-import { Text } from "../components/Language";
+import { StringOfText } from "../components/Language";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 function ServiceGalery(service) {
-	const [index, setIndex] = useState(0);
 	const itemsPerPage = 3;
-	const pages = Math.ceil(services.length / itemsPerPage);
+
+	const [index, setIndex] = useState(0);
+	const [endOfSlice, setEndOfSlice] = useState(itemsPerPage);
 
 	const serviceName = service.service;
 
+	const newService = services.filter((typeOfService) => {
+		return typeOfService.service === serviceName;
+	});
+
+	const lengthOfService = newService.length - 1;
+
 	const prevBtn = () => {
 		if (index === 0) {
-			setIndex(pages - 1);
+			setIndex(lengthOfService);
+			setEndOfSlice(lengthOfService + itemsPerPage);
 		} else {
-			setIndex((index) => {
-				let newIndex = index - 1;
-				return newIndex;
-			});
-		}
-	};
-	const nextBtn = () => {
-		if (index === pages - 1) {
-			setIndex(0);
-		} else {
-			setIndex((index) => {
-				let newIndex = index + 1;
-				return newIndex;
-			});
+			setIndex(index - 1);
+			setEndOfSlice(endOfSlice - 1);
 		}
 	};
 
-	const newService = Array.from({ length: pages }, (_, index) => {
-		const start = index * itemsPerPage;
-		return services
-			.filter((typeOfService) => {
-				return typeOfService.service === service.service;
-			})
-			.slice(start, start + itemsPerPage);
-	});
+	const nextBtn = () => {
+		if (index === lengthOfService) {
+			setIndex(0);
+			setEndOfSlice(itemsPerPage);
+		} else {
+			setIndex(index + 1);
+			setEndOfSlice(endOfSlice + 1);
+		}
+	};
+
+	const showServiceCaroussel = newService.slice(index, endOfSlice);
+
+	if (showServiceCaroussel.length == 2) {
+		showServiceCaroussel.push(newService[0]);
+	}
+	if (showServiceCaroussel.length == 1) {
+		showServiceCaroussel.push(newService[0], newService[1]);
+	}
 
 	return (
 		<>
-			<h3 className="title">{serviceName}</h3>
+			<h3 className="title">{StringOfText(serviceName)}</h3>
 			<div className="galery">
 				<div className="galery-btn" id="align-right">
 					<button className="arrow-btn" onClick={prevBtn}>
@@ -52,7 +58,7 @@ function ServiceGalery(service) {
 				</div>
 
 				<div className="container" id="align-center">
-					{newService[index].map((design) => {
+					{showServiceCaroussel.map((design) => {
 						return <ServiceItem key={design.id} {...design} />;
 					})}
 				</div>

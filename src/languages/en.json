@@ -7,8 +7,8 @@
 
 	"SETUP": "SETUP",
 
-	"experience": "for a better experience,",
-	"name": "write here your name",
+	"experience": "for a better experience, write here",
+	"name": "your first name",
 	"lets-go": "let's go",
 
 	"NAVBAR": "NAVBAR",
@@ -42,5 +42,12 @@
 	"form-service": "service",
 	"form-submit": "submit",
 	"select": "select",
-	"other": "other"
+	"other": "other",
+
+	"ABOUT ME": "ABOUT ME",
+
+	"this-is-me": "this is me.",
+	"me-profile1": "I'm a Multimedia Technician in love with the audiovisual content, but also with interests in areas as design, 3D modelation, virtual reality, augmented reality, web design and multimedia interfaces.",
+	"me-profile2": "I'm dedicated, honest, commited and I learn quickly whenever I need to evolve. I'm not afraid of a challenge, because I believe that's the discomfort that can make me a better professional.",
+	"questions": "for any question that may arise, do not hesitate in contact me through my email - rafaelteixeiradesousa@outlook.com - or filling in the form bellow."
 }
