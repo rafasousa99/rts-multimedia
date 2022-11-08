@@ -41,6 +41,7 @@ const Home = () => {
 					</div>
 					<div className="col">
 						<h1>
+							YEEEEEESS
 							<Text tid="hi" />
 							{userName}
 						</h1>
