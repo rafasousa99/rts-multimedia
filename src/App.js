@@ -14,9 +14,16 @@ import Contacts from "./pages/Contacts";
 import TestPage from "./pages/TestPage";
 import Error from "./pages/Error";
 import SetupForm from "./SetupForm";
+import { useEffect } from "react";
 
 function App() {
-	const { waiting, error } = useGlobalContext();
+	const { waiting, error, theme } = useGlobalContext();
+
+	useEffect(() => {
+		document.documentElement.className = theme;
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
 	return (
 		<LanguageProvider>
 			{waiting ? (

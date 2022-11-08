@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-:root {
+/* :root {
+	--clr-bcg: #f7fbfc;
+	--clr-font: #001f2b;
+	--clr-primary: #006382;
+	--clr-scnd: #004054;
+} */
+
+.dark-theme {
+	--clr-bcg: #00161f;
+	--clr-font: #f7fbfc;
+	--clr-primary: #00aee3;
+	--clr-scnd: #f7fbfc;
+}
+
+.light-theme {
 	--clr-bcg: #f7fbfc;
 	--clr-font: #001f2b;
 	--clr-primary: #006382;
@@ -14,6 +28,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--clr-bcg);
+	transition: 0.3s;
 }
 
 h1 {
@@ -141,7 +156,6 @@ code {
 input,
 select,
 text {
-	color: var(--clr-font);
 	font-weight: 600;
 	font-size: 16px;
 	padding-left: 10px;
@@ -223,6 +237,30 @@ input:focus {
 }
 
 .main-btn:active {
+	color: var(--clr-bcg);
+	background-color: var(--clr-scnd);
+	border-color: var(--clr-scnd);
+}
+
+.scnd-btn {
+	color: var(--clr-scnd);
+	font-size: 15px;
+	font-weight: 200;
+	text-transform: lowercase;
+	background-color: transparent;
+	border: solid 1px var(--clr-scnd);
+	border-radius: 15px;
+	padding: 5px 15px;
+	margin-right: 20px;
+}
+
+.scnd-btn:hover {
+	color: var(--clr-bcg);
+	background-color: var(--clr-primary);
+	border-color: var(--clr-primary);
+}
+
+.scnd-btn:active {
 	color: var(--clr-bcg);
 	background-color: var(--clr-scnd);
 	border-color: var(--clr-scnd);
