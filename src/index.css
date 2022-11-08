@@ -269,7 +269,7 @@ input:focus {
 .service-container {
 	width: 300px;
 	height: 300px;
-	background-color: var(--clr-primary);
+	background-color: var(--clr-font);
 	display: inline-block;
 	margin: 0px 20px;
 }
