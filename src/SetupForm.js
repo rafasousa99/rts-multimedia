@@ -3,8 +3,9 @@ import { useGlobalContext } from "./context";
 import LanguageSelector from "./utils/LanguageSelector";
 import { Text } from "./components/Language";
 
-const SetupForm = () => {
-	const { name, handleChange, handleSubmit } = useGlobalContext();
+const SetupForm = (props) => {
+	const { name, handleChange } = useGlobalContext();
+
 	return (
 		<main className="setup-form">
 			<form>
@@ -16,7 +17,7 @@ const SetupForm = () => {
 					<Text tid="name" />
 				</h1>
 				<input type="text" name="name" id="name" value={name} onChange={handleChange}></input>
-				<button type="submit" onClick={handleSubmit} className="main-btn">
+				<button type="submit" onClick={props.submit} className="main-btn">
 					<Text tid="lets-go" />
 				</button>
 			</form>
