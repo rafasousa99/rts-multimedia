@@ -14,10 +14,16 @@ import Contacts from "./pages/Contacts";
 import TestPage from "./pages/TestPage";
 import Error from "./pages/Error";
 import SetupForm from "./SetupForm";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-	const { waiting, error, theme } = useGlobalContext();
+	const [waiting, setWaiting] = useState(true);
+	const { theme } = useGlobalContext();
+
+	const handleSubmitInitialForm = (e) => {
+		e.preventDefault();
+		setWaiting(false);
+	};
 
 	useEffect(() => {
 		document.documentElement.className = theme;
@@ -27,7 +33,7 @@ function App() {
 	return (
 		<LanguageProvider>
 			{waiting ? (
-				<SetupForm />
+				<SetupForm submit={handleSubmitInitialForm} />
 			) : (
 				<BrowserRouter className="navbar container">
 					<Navbar />

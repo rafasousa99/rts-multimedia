@@ -21,15 +21,12 @@ const Home = () => {
 	}, []);
 
 	function handleClickBtn(e) {
-		let target = e.target.title;
-		console.log(target);
-		if (target == "photography") {
-			photography.current.scrollIntoView({ behavior: "smooth" });
-		} else if (target == "video") {
-			video.current.scrollIntoView({ behavior: "smooth" });
-		} else if (target == "design") {
-			design.current.scrollIntoView({ behavior: "smooth" });
+		const refs = { photography, video, design };
+		const refToUse = refs[e.target.title];
+		if (!refToUse) {
+			return;
 		}
+		refToUse.current.scrollIntoView({ behavior: "smooth" });
 	}
 
 	return (

@@ -3,8 +3,6 @@ import React, { useState, useContext, useEffect } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-	const [waiting, setWaiting] = useState(true);
-	const [error, setError] = useState(false);
 	const [name, setName] = useState("");
 
 	const getStorageTheme = () => {
@@ -22,11 +20,6 @@ const AppProvider = ({ children }) => {
 		setName(targetValue);
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		setWaiting(false);
-	};
-
 	function toggleTheme() {
 		if (theme === "light-theme") {
 			setTheme("dark-theme");
@@ -38,9 +31,7 @@ const AppProvider = ({ children }) => {
 	}
 
 	return (
-		<AppContext.Provider value={{ waiting, error, name, handleChange, handleSubmit, theme, setTheme, toggleTheme }}>
-			{children}
-		</AppContext.Provider>
+		<AppContext.Provider value={{ name, handleChange, theme, setTheme, toggleTheme }}>{children}</AppContext.Provider>
 	);
 };
 // make sure use
