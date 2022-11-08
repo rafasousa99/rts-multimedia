@@ -4,9 +4,17 @@ import LanguageSelector from "../utils/LanguageSelector";
 import navIcon from "../images/logos/RTS-icon-small.png";
 import { Link } from "react-router-dom";
 import { Text } from "../components/Language";
+import Switch from "react-switch";
+import { useState } from "react";
 
 const Navbar = () => {
 	const { toggleTheme } = useGlobalContext();
+
+	const [checked, setChecked] = useState(false);
+	const handleChange = (nextChecked) => {
+		setChecked(nextChecked);
+		toggleTheme();
+	};
 
 	return (
 		<nav className="navbar container">
@@ -26,9 +34,7 @@ const Navbar = () => {
 					<Text tid="contacts" />
 				</Link>
 
-				<button className="scnd-btn" onClick={toggleTheme}>
-					toggle
-				</button>
+				<Switch onChange={handleChange} onClick={toggleTheme} checked={checked} className="react-switch" />
 
 				<LanguageSelector />
 			</div>

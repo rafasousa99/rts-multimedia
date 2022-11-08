@@ -9,7 +9,7 @@ export default function LanguageSelector() {
 	const handleLanguageChange = (e) => userLanguageChange(e.target.value);
 
 	return (
-		<select onChange={handleLanguageChange} value={userLanguage}>
+		<select onChange={handleLanguageChange} value={userLanguage} style={{ verticalAlign: "middle" }}>
 			{Object.entries(languageOptions).map(([id, name]) => (
 				<option key={id} value={id}>
 					{name}
