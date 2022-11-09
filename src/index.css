@@ -183,6 +183,14 @@ input:focus {
 	padding-top: 28px;
 }
 
+.icons-toggle {
+	color: #f7fbfc;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	padding-top: 6px;
+}
+
 /* --> FOOTER <-- */
 
 .footer {

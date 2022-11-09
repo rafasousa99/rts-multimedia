@@ -23,10 +23,8 @@ const AppProvider = ({ children }) => {
 	function toggleTheme() {
 		if (theme === "light-theme") {
 			setTheme("dark-theme");
-			console.log(theme);
 		} else {
 			setTheme("light-theme");
-			console.log(theme);
 		}
 	}
 

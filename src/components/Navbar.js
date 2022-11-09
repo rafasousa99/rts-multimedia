@@ -6,11 +6,22 @@ import { Link } from "react-router-dom";
 import { Text } from "../components/Language";
 import Switch from "react-switch";
 import { useState } from "react";
+import { useEffect } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
-	const { toggleTheme } = useGlobalContext();
+	const { toggleTheme, theme } = useGlobalContext();
+
+	useEffect(() => {
+		if (theme === "light-theme") {
+			setChecked(false);
+		} else {
+			setChecked(true);
+		}
+	}, []);
 
 	const [checked, setChecked] = useState(false);
+
 	const handleChange = (nextChecked) => {
 		setChecked(nextChecked);
 		toggleTheme();
@@ -34,7 +45,16 @@ const Navbar = () => {
 					<Text tid="contacts" />
 				</Link>
 
-				<Switch onChange={handleChange} onClick={toggleTheme} checked={checked} className="react-switch" />
+				<Switch
+					onChange={handleChange}
+					onClick={toggleTheme}
+					checked={checked}
+					className="react-switch"
+					onColor="#00aee3"
+					offColor="#004054"
+					checkedIcon={<FaMoon className="icons-toggle" />}
+					uncheckedIcon={<FaSun className="icons-toggle" />}
+				/>
 
 				<LanguageSelector />
 			</div>
